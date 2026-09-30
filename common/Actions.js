@@ -10,8 +10,7 @@ class Actions {
         await element.setValue(value)
     }
     async ScrollIntoView(element){
-        await element.waitForDisplayed({timeout:120000})
-        await element.scrollIntoView(false)
+        await element.scrollIntoView()
     }
 }
 module.exports = new Actions()

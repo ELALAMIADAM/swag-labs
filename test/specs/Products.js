@@ -26,7 +26,6 @@ describe("products parcours",()=>{
             await actions.SetValue(CheckoutInfoPage.LastName,"hmida")
             await actions.SetValue(CheckoutInfoPage.zio,"23132")
             await actions.Click(CheckoutInfoPage.continue_btn)
-            
             await actions.ScrollIntoView(OverviewPage.gotocompelete)
             await actions.Click(OverviewPage.gotocompelete)
 
