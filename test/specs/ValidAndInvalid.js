@@ -1,7 +1,8 @@
 const loginpage = require("../pageobjects/LoginPage")
 const HomePage = require("../pageobjects/HomePage")
 const data = require('../data/jdd.json');
-
+/** @type {import('webdriverio').Browser} */
+const browser = global.browser;
 
 const actions = require("../../common/Actions")
 const assertion = require("../../common/Assertions");
@@ -9,13 +10,20 @@ const allure = require("@wdio/allure-reporter").default
 describe("products parcoursnnn",()=>{
 
     data.forEach(({ username, password, result }) => {
-        beforeEach(async () => {
+
+        afterEach(async () => {
             await browser.reloadSession();
         });
-
-        // afterEach(async () => {
-        //     await browser.deleteSession();
-        // });
+        
+        
+        
+        // // Other method 
+        // beforeEach("activateapp",async()=>{
+        //     await driver.activateApp("com.swaglabsmobileapp")
+        // })
+        // afterEach("terminateapp",async ()=>{
+        //     await driver.terminateApp("com.swaglabsmobileapp")
+        // })
         it("parcours achat produit et commander", async () => {
             await allure.step("click login", async () => {
                 await actions.SetValue(loginpage.username, username)
