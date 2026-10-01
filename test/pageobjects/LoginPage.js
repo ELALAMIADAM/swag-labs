@@ -9,6 +9,9 @@ class LoginPage{
     get ButtonLogin(){
         return $(loginElement.button_save)
     }
+    get MsgError(){
+        return $(loginElement.msg_err)
+    }
 }
 
 module.exports = new LoginPage()

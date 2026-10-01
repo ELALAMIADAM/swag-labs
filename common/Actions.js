@@ -4,9 +4,9 @@ class Actions {
         await element.waitForDisplayed({timeout:120000})
         await element.click()
     }
-    async SetValue(element,value){
+    async SetValue(element, value){
         await element.waitForDisplayed({timeout:120000})
-        await element.clearValue(value)
+        await element.clearValue()
         await element.setValue(value)
     }
     async ScrollIntoView(element){

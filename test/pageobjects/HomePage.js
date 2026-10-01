@@ -12,6 +12,9 @@ class HomePage{
     get remove_btn(){
         return $(HomeElement.remove_btn)
     }
+    get hometitle(){
+        return $(HomeElement.home_title)
+    }
 }
 
 module.exports = new HomePage()
